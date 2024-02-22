@@ -10,8 +10,9 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-        <!-- Scripts -->
+        <link href="{{asset('backend/assets/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('backend/assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('backend/assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
@@ -32,5 +33,19 @@
                 {{ $slot }}
             </main>
         </div>
+        <script src="{{asset('backend/assets/plugins/global/plugins.bundle.js')}}"></script>
+        <script src="{{asset('backend/assets/js/scripts.bundle.js')}}"></script>
+        <!--end::Global Javascript Bundle-->
+        <!--begin::Page Vendors Javascript(used by this page)-->
+        <script src="{{asset('backend/assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
+        <!--end::Page Vendors Javascript-->
+        <!--begin::Page Custom Javascript(used by this page)-->
+        <script src="{{asset('backend/assets/js/custom/apps/customers/list/export.js')}}"></script>
+        <script src="{{asset('backend/assets/js/custom/apps/customers/list/list.js')}}"></script>
+        <script src="{{asset('backend/assets/js/custom/apps/customers/add.js')}}"></script>
+        <script src="{{asset('backend/assets/js/custom/widgets.js')}}"></script>
+        <script src="{{asset('backend/assets/js/custom/apps/chat/chat.js')}}"></script>
+        <script src="{{asset('backend/assets/js/custom/modals/create-app.js')}}"></script>
+        <script src="{{asset('backend/assets/js/custom/modals/upgrade-plan.js')}}"></script>
     </body>
 </html>

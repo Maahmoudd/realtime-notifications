@@ -19,5 +19,12 @@ class AdminSeeder extends Seeder
             'email_verified_at' => now(),
             'password' => bcrypt('password'),
         ])->assignRole('admin');
+
+        User::create([
+            'name' => 'manager',
+            'email' => 'manager@gmail.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('password'),
+        ])->assignRole('manager');
     }
 }
