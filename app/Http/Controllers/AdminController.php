@@ -12,4 +12,12 @@ class AdminController extends Controller
         $users = User::role('user')->paginate(10);
         return view('dashboard', compact('users'));
     }
+
+
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+        return response(['status' => 'success', 'message' => 'Deleted Successfully']);
+    }
 }
